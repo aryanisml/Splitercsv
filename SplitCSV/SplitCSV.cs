@@ -119,7 +119,11 @@ namespace SplitCSV
                             }
                             
                         }
-                        progressBar1.Value = fileCounter;    
+                        if (fileCounter<progressBar1.Maximum)
+                        {
+                            progressBar1.Value = fileCounter;       
+                        }
+                         
                         destinationFile.WriteLine(line);
                         lineCounter++;
                     }
